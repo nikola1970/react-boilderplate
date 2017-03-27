@@ -8,7 +8,15 @@ module.exports = {
 		path: "./public",
 		filename: "bundle.js"
 	},
-
+	resolve: {
+		path: "__dirname",
+		modulesDirectories: [
+			"node_modules",
+			"./app/components",
+			"./app/api"
+		],
+		extensions: ["", ".js", ".jsx"]
+	},
 	module: {
 		loaders: [
 			{
